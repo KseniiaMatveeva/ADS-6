@@ -1,7 +1,7 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
-#include <string>
+
 
 template<typename T, int size>
 class TPQueue {
@@ -11,9 +11,7 @@ class TPQueue {
  public :
   TPQueue():first(0), last(0) {}
   void push(T value) {
-    if (last - first >= size) {
-      throw std::string("Full");
-    } else {
+    if (last - first < size) {
       int zam = last + 1;
       while ((zam >= first)) {
         if (value.prior > arr[(zam) % size].prior) {
@@ -27,9 +25,7 @@ class TPQueue {
     }
   }
   T pop() {
-    if (first == last) {
-      throw std :: string("Empty");
-    } else {
+    if (!(first == last)) {
       return arr[(first++) % size];
     }
   }
