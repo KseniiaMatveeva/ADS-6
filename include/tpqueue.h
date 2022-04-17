@@ -6,7 +6,7 @@
 template<typename T, int size>
 class TPQueue {
  private :
-  T arr[100];
+  T arr[10];
   int first, last;
  public :
   TPQueue():first(0), last(0) {}
@@ -19,9 +19,7 @@ class TPQueue {
         arr[(1 + zam) % size] = arr[zam % size];
         zam--;
       }
-      if (value.prior == arr[(zam) % size].prior) {
-          arr[zam % size] = value;
-      }
+      arr[zam % size] = value;
     }
   }
   T pop() {
