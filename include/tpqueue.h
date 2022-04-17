@@ -9,7 +9,7 @@ class TPQueue {
   T arr[10];
   int first, last;
  public :
-  TPQueue():first(0), last(0){};
+  TPQueue():first(0), last(0){}
   void push(T value) {
     if (last - first >= size) {
       throw std::string("Full");
