@@ -1,14 +1,13 @@
 // Copyright 2022 NNTU-CS
-#ifndef _________TPQUEUE_H_
+#ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
-#include <string>
 
 template<typename T, int size>
 class TPQueue {
  private:
-  T arr[size];
-  int first, last;
-public:
+    T arr[size];
+    int first, last;
+ public:
   TPQueue():first(0), last(0);
   void push(T value) {
     if (last - first >= size) {
@@ -43,4 +42,4 @@ struct SYM {
   int prior;
 };
 
-#endif  // _________TPQUEUE_H_
+#endif  // INCLUDE_TPQUEUE_H_
