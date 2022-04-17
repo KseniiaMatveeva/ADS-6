@@ -16,11 +16,11 @@ class TPQueue {
       while ((zam >= first)) {
         if ((value.prior <= arr[(zam - 1) % size].prior) && zam > first) {
           arr[(zam) % size] = arr[(zam - 1) % size];
-          zam--;
         } else {
           arr[zam % size] = value;
           break;
         }
+        zam--;
       }
     }
   }
