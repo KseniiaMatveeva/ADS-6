@@ -12,7 +12,7 @@ class TPQueue {
   TPQueue():first(0), last(0) {}
   void push(T value) {
     if (last - first < size) {
-      int zam = last + 1;
+      int zam = last++;
       while ((zam >= first)) {
         if (value.prior > arr[(zam) % size].prior) {
           arr[(zam + 1) % size] = value;
