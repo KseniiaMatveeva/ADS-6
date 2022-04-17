@@ -21,7 +21,7 @@ class TPQueue {
       }
       if (value.prior == arr[(zam) % size].prior) {
           arr[zam % size] = value;
-        }
+      }
     }
   }
   T pop() {
