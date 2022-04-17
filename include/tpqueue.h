@@ -12,14 +12,14 @@ class TPQueue {
   TPQueue():first(0), last(0) {}
   void push(T value) {
     if (last - first < size) {
-      int zam = last + 1;
-      while ((zam > first)) {
+      int zam = ++last;
+      while ((zam >= first)) {
         if (value.prior <= arr[(zam) % size].prior) {
           arr[(zam) % size] = arr[(zam - 1) % size];
           zam--;
-          break;
         } else {
           arr[zam % size] = value;
+          break;
         }
       }
     }
