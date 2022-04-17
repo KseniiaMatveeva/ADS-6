@@ -17,12 +17,14 @@ class TPQueue {
       if (value.prior >= arr[(last++) % size].prior) {
         arr[(last++) % size] = value;
       } else {
-        while (value.prior < arr[(last) % size].prior) {
-          arr[(1 + last++) % size] = arr[last++ % size];
-          if (value.prior >= arr[(last++) % size].prior) {
-            arr[(last++) % size] = value;
+      int zam = last++;
+        while (value.prior < arr[(zam - 1) % size].prior) {
+          if (value.prior == arr[(zam) % size].prior) {
+            arr[zam % size] = value;
             break;
           }
+          arr[(1 + zam) % size] = arr[zam % size];
+          zam--;
         }
       }
     }
