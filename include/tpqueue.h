@@ -15,7 +15,7 @@ class TPQueue {
       int zam = last + 1;
       while ((zam > first)) {
         if (value.prior <= arr[(zam) % size].prior) {
-          arr[(1 + zam) % size] = arr[zam % size];
+          arr[(zam) % size] = arr[(zam - 1) % size];
           zam--;
           break;
         } else {
