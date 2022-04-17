@@ -7,6 +7,7 @@ class TPQueue {
   // реализация шаблона очереди с приоритетом на кольцевом буфере
 };
 
+
 struct SYM {
   char ch;
   int prior;
