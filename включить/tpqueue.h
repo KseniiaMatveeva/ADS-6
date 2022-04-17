@@ -21,6 +21,7 @@ class TPQueue {
           if (arr[i].prior < value.prior) {
             arr[i % size] = value;
             last++;
+            break;
           }
           arr[i % size] = arr[last++ % size];
           i--;
@@ -32,7 +33,7 @@ class TPQueue {
     if (first == last) {
       throw std :: string("Empty");
     } else {
-      return arr[(last++) % size];
+      return arr[(first++) % size];
     }
   }
 };
