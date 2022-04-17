@@ -26,7 +26,7 @@ class TPQueue {
   }
   T pop() {
     if (!(first == last)) {
-      return arr[(first++) % size];
+      return arr[last--];
     }
   }
 };
