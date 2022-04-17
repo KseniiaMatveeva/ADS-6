@@ -15,14 +15,13 @@ class TPQueue {
       throw std::string("Full");
     } else {
       int zam = last++;
-      while (value.prior > arr[(zam - 1) % size].prior) {
-        if (value.prior == arr[(zam) % size].prior) {
-          arr[zam % size] = value;
-          break;
-        }
+      while ((value.prior > arr[(zam - 1) % size].prior) && (last >= first) {
         arr[(1 + zam) % size] = arr[zam % size];
         zam--;
       }
+      if (value.prior == arr[(zam) % size].prior) {
+          arr[zam % size] = value;
+        }
     }
   }
   T pop() {
