@@ -1,5 +1,5 @@
 // Copyright 2022 NNTU-CS
-#ifndef INCLUDE_TPQUEUE_H_
+#ifndef _________TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 #include <string>
 
@@ -8,7 +8,7 @@ class TPQueue {
  private:
   T arr[size];
   int first, last;
- public:
+public:
   TPQueue():first(0), last(0);
   void push(T value) {
     if (last - first >= size) {
@@ -43,4 +43,4 @@ struct SYM {
   int prior;
 };
 
-#endif  // INCLUDE_TPQUEUE_H_
+#endif  // _________TPQUEUE_H_
