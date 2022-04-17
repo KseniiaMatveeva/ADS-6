@@ -19,7 +19,6 @@ class TPQueue {
       } else {
         while (value.prior < arr[(last) % size].prior) {
           arr[(1 + last++) % size] = arr[last++ % size];
-          }
         }
       }
     }
