@@ -13,11 +13,10 @@ class TPQueue {
   void push(T value) {
     int zam = last++;
     //if (last - first < size) {
-      while ((--zam >= first) && value.prior > arr[zam % size].prior) {
+      while ((--zam >= first) && (value.prior > arr[zam % size].prior)) {
         arr[(zam + 1) % size] = arr[(zam) % size];
-        zam--;
       }
-      arr[zam % size] = value;
+      arr[(zam + 1) % size] = value;
     //}
   }
   T pop() {
